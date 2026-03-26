@@ -1,0 +1,54 @@
+# ============================================================
+# medicine.yaml — YOLOv8 Dataset Configuration
+# Place this file in: dataset/medicine.yaml
+# ============================================================
+
+# Path to dataset root (update this for your environment)
+path: ./dataset          # Root directory
+train: train/images      # Training images (relative to path)
+val: val/images          # Validation images
+test: test/images        # Test images (optional)
+
+# Number of classes
+nc: 4
+
+# Class names — adjust based on your actual dataset
+names:
+  0: pill_strip          # Blister/strip packaging
+  1: pill_bottle         # Pill bottle / jar
+  2: tablet              # Loose tablet (if visible)
+  3: medicine_box        # Medicine cardboard box
+
+# ============================================================
+# ANNOTATION FORMAT (YOLO format — one .txt per image)
+# Each line in label file:
+#   class_id  x_center  y_center  width  height
+# All values normalized to [0, 1] relative to image size
+#
+# Example label file content:
+#   0 0.512 0.423 0.340 0.280
+#   1 0.810 0.600 0.150 0.200
+# ============================================================
+
+# ============================================================
+# DATASET SOURCES (choose one approach)
+# ============================================================
+# OPTION A: Roboflow Public Dataset (Recommended for beginners)
+#   1. Go to: https://roboflow.com/
+#   2. Search: "pill detection" or "medicine strip"
+#   3. Download in "YOLOv8" format
+#   4. Extract and replace this dataset/ folder
+#
+# OPTION B: Custom Dataset (100–300 images recommended)
+#   1. Collect 100–300 images of your medicines
+#      - Photograph pill strips, bottles, boxes
+#      - Vary lighting, angles, backgrounds
+#   2. Annotate using LabelImg (free tool):
+#      pip install labelImg
+#      labelImg
+#   3. Save labels in YOLO format
+#   4. Split: 70% train, 20% val, 10% test
+#
+# OPTION C: Use this script to auto-split:
+#   python utils/preprocess.py --split
+# ============================================================

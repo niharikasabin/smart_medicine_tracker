@@ -1,0 +1,36 @@
+# Smart Medicine Adherence Tracker - Requirements
+# Install with: pip install -r requirements.txt
+
+# Core ML
+ultralytics>=8.0.0          # YOLOv8
+torch>=2.0.0                # PyTorch (LSTM + YOLO backend)
+torchvision>=0.15.0
+
+# Computer Vision
+opencv-python>=4.8.0
+Pillow>=10.0.0
+
+# Data & ML
+numpy>=1.24.0
+pandas>=2.0.0
+scikit-learn>=1.3.0
+matplotlib>=3.7.0
+seaborn>=0.12.0
+
+# GUI
+streamlit>=1.28.0
+plotly>=5.17.0
+streamlit-extras>=0.3.0
+
+# Database
+# sqlite3 is built into Python standard library
+
+# Notifications
+smtplib                     # Built-in Python
+plyer>=2.1.0                # Desktop notifications (cross-platform)
+
+# Utilities
+python-dotenv>=1.0.0
+tqdm>=4.66.0
+PyYAML>=6.0.0
+requests>=2.31.0
